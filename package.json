@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npx tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "APP_URL=https://smartbookmarker.com node dist/index.js",
+    "start": "npm run build && APP_URL=https://smartbookmarker.com node dist/index.js",
     "dev": "APP_URL=http://localhost:3000 concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\""
   },
   "author": "",
