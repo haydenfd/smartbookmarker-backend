@@ -25,7 +25,7 @@ router.get('/login', async function (req: JWTRequest, res) {
     const jwt = signUserJWT({
       twitterToken: token.token
     })
-    res.redirect(createQueryStringURL(`completeAuth?token=${jwt}`));
+    res.redirect(createQueryStringURL(`api/completeAuth?token=${jwt}`));
   } catch (error) {
     console.log(error);
     res.redirect(createQueryStringURL('failed-login'))
